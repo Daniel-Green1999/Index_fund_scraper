@@ -33,7 +33,7 @@ tmp_names = table_header.find('tr')
 col_names = tmp_names.find_all('th')
 col_names = [ele.text.strip() for ele in col_names]
 
- ############# Creating the pandas dataframe ############# 
+############# Creating the pandas dataframe #############
 df = pd.DataFrame(historical_data, columns = col_names)
 
 historical_high = df['High'].str.replace(",", "").astype(float).to_numpy()
